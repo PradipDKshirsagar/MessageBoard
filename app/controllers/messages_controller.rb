@@ -39,11 +39,12 @@ class MessagesController < ApplicationController
   end
 
   private
-    def message_params
-      params.require(:message).permit(:title, :description)
-    end
 
-    def find_message
-      @message = Message.find(params[:id])
-    end
+  def message_params
+    params.require(:message).permit(:title, :description)
+  end
+
+  def find_message
+    @message = Message.find(params[:id])
+  end
 end
